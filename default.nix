@@ -1,4 +1,6 @@
-{ pkgs ? import <nixpkgs> { } }:
+{
+  pkgs ? import <nixpkgs> { },
+}:
 let
   lib = pkgs.lib;
   getLibrary = pkg: "${pkg}/lib";
@@ -27,9 +29,9 @@ pkgs.llvmPackages.stdenv.mkDerivation rec {
 
   # Some normal fucking detail about the project
   meta = with lib; {
-    homepage = "https://github.com/orzklv/sabine";
+    homepage = "https://github.com/sabine-lang/libsabine";
     description = ''
-      A toy compiler named after Sabine
+      Various implementations for a toy compiler named after Sabine
     '';
     licencse = licenses.wtfpl;
     platforms = with platforms; linux ++ darwin;
@@ -42,9 +44,11 @@ pkgs.llvmPackages.stdenv.mkDerivation rec {
         handle = "orzklv";
         github = "orzklv";
         githubId = 54666588;
-        keys = [{
-          fingerprint = "00D2 7BC6 8707 0683 FBB9  137C 3C35 D3AF 0DA1 D6A8";
-        }];
+        keys = [
+          {
+            fingerprint = "00D2 7BC6 8707 0683 FBB9  137C 3C35 D3AF 0DA1 D6A8";
+          }
+        ];
       }
       # Sabine, herself here, possibly...
       # {}
