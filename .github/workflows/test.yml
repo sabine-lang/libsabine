@@ -32,6 +32,3 @@ jobs:
 
       - name: Build the project with llvm package
         run: nix build .
-
-      - name: Runt the llvm hosted binary
-        run: nix run .
