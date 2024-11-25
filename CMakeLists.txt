@@ -13,6 +13,6 @@ set(CMAKE_BUILD_TYPE Debug)
 
 install(TARGETS sabine DESTINATION lib)
 
-file(GLOB SABINE_HDRS CONFIGURE_DEPENDS "include/*.h")
+file(GLOB SABINE_HDRS CONFIGURE_DEPENDS "include/sabine/*.h")
 
-install(FILES ${SABINE_HDRS} DESTINATION include)
+install(FILES ${SABINE_HDRS} DESTINATION include/sabine)
