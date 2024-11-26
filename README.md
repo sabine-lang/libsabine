@@ -15,8 +15,8 @@
 
 C is raw and it needs lotta abstractions to ease the development. Therefore, this repo was created to utilize all necessary implementations as a static library. Currently, the followings are implemented and can be used from your repo:
 
-- buffer.h [Source](./include/buffer.h)
-- vector.h [Source](./include/vector.h)
+- buffer.h [[Source]](./include/sabine/buffer.h)
+- vector.h [[Source]](./include/sabine/vector.h)
 
 ## Development
 
