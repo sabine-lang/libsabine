@@ -53,7 +53,7 @@ pkgs.stdenv.mkDerivation {
         cd $_build
 
         # Bootstrap cmake
-        cmake ..
+        cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 
         # Return back
         cd $cwp
