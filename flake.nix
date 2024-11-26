@@ -21,12 +21,13 @@
   };
 
   outputs =
-    { self
-    , nixpkgs
-    , utils
-    } @ inputs:
-    utils.lib.eachDefaultSystem
-      (system:
+    {
+      self,
+      nixpkgs,
+      utils,
+    }@inputs:
+    utils.lib.eachDefaultSystem (
+      system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
       in
@@ -41,10 +42,13 @@
 
         # Output packages
         packages.default = pkgs.callPackage ./. { };
-      })
+      }
+    )
 
-    // # and
+    # and
+    //
 
-    # Possible static attrsets (just in case for the future)
-    { };
+      # Possible static attrsets (just in case for the future)
+      {
+      };
 }
